@@ -7,6 +7,12 @@ Thumbs.db
 .Trashes
 .apdisk
 .fseventsd
+node_modules/
+
+# Secrets
+.env
+
+# Development Mush
 
 # Editor files
 *.sublime-*
