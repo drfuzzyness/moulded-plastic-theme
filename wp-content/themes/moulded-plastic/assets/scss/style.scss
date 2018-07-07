@@ -1,0 +1,9 @@
+@charset 'utf-8';
+
+@import "settings";
+
+// Import foundation.scss from vendor files
+@import "../../../../../node_modules/foundation-sites/scss/foundation";
+
+// Import Motion-UI from vendor files
+@import "../../../../../node_modules/motion-ui/src/motion-ui";

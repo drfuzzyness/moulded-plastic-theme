@@ -29,7 +29,8 @@
     "replace-ext": "0.0.1",
     "run-sequence": "^1.1.2",
     "through2": "^2.0.0",
-    "vinyl": "^0.5.1"
+    "vinyl": "^0.5.1",
+    "foundation-sites": "^6.4.3"
   },
   "gulp": {
     "theme": "moulded-plastic",
