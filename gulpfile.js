@@ -183,29 +183,3 @@ gulp.task('replace-versioned-assets-in-templates', function () {
     .pipe(collect({ replaceReved: true, dirReplacements: dirReplacements }))
     .pipe(gulp.dest(themePath));
 });
-
-
-
-// S3
-// --
-
-gulp.task('gzip-assets', function () {
-  return gulp.src([
-      '!' + distPath + '/**/*.gz',
-      distPath + '/**/*'
-    ])
-    .pipe(awspublish.gzip({ ext: '.gz' }))
-    .pipe(gulp.dest(distPath));
-});
-
-gulp.task('publish-to-s3', function () {
-  var publisher = awspublish.create(config.aws);
-  var headers = {
-    'Cache-Control': 'max-age=31536000, no-transform, public'
-  };
-
-  return gulp.src(distPath + '/**')
-    .pipe(publisher.publish(headers))
-    .pipe(publisher.sync())
-    .pipe(awspublish.reporter());
-});
