@@ -1,11 +1,9 @@
 @charset 'utf-8';
 
-@import "settings";
+// @import 'settings';
 @import 'conto-settings';
-
-// Import foundation.scss from vendor files
-@import "../../../../../node_modules/foundation-sites/scss/foundation";
-
+@import 'foundation';
+@import 'motion-ui';
 
 
 @include foundation-global-styles;
@@ -18,7 +16,7 @@
 @include foundation-float-classes;
 @include foundation-accordion;
 @include foundation-accordion-menu;
-// @include foundation-badge;
+@include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
 @include foundation-callout;
@@ -27,7 +25,7 @@
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
 @include foundation-flex-video;
-// @include foundation-label;
+@include foundation-label;
 @include foundation-media-object;
 @include foundation-menu;
 @include foundation-off-canvas;
@@ -45,8 +43,7 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 
-@import 'conto-style';
+@include motion-ui-transitions;
+@include motion-ui-animations;
 
-// Import Motion-UI from vendor files
-// I'm not using Motion-UI, but if I were..
-// @import "../../../../../node_modules/motion-ui/src/motion-ui";
+@import 'conto-style';

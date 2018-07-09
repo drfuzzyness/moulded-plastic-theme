@@ -4,10 +4,13 @@
   "scripts": {
     "wp": "docker-compose exec wordpress bash"
   },
-  "dependencies": {},
+  "dependencies": {
+    "motion-ui": "^2.0.3"
+  },
   "devDependencies": {
     "chalk": "^1.1.0",
     "dateformat": "^1.0.11",
+    "foundation-sites": "^6.4.3",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean": "^0.4.0",
@@ -28,8 +31,7 @@
     "replace-ext": "1.0.0",
     "run-sequence": "^2.0.0",
     "through2": "^2.0.0",
-    "vinyl": "^2.0.0",
-    "foundation-sites": "^6.4.3"
+    "vinyl": "^2.0.0"
   },
   "gulp": {
     "theme": "moulded-plastic",

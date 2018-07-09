@@ -14,7 +14,6 @@ var imagemin     = require('gulp-imagemin');
 var pngquant     = require('imagemin-pngquant');
 var uglify       = require('gulp-uglify');
 var minifyCss    = require('gulp-minify-css');
-var awspublish   = require('gulp-awspublish');
 var autoprefixer = require('gulp-autoprefixer');
 
 // Configuration
