@@ -22,7 +22,7 @@
 
 			<?php if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
-				<?php mattconto_2016_posted_on();
+				<?php moulded_plastic_posted_on();
 				$categories = get_the_category();
 				if ( ! empty( $categories ) ) {
 					echo ' - from <a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
@@ -37,7 +37,7 @@
 		</div><!-- .entry-summary -->
 
 		<div class="entry-footer">
-			<?php mattconto_2016_entry_footer(); ?>
+			<?php moulded_plastic_entry_footer(); ?>
 		</div><!-- .entry-footer -->
 	</article><!-- #post-## -->
 </div>

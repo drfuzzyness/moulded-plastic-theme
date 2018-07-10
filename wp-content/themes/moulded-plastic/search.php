@@ -11,7 +11,7 @@ get_header(); ?>
 		<section class="row align-center page-block">
 			<div class="column large-8 small-10">
 				<span class="blue caps">Search Results:</span>
-				<h2 class="orange"><?php printf( esc_html__( '%s', 'mattconto-2016' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+				<h2 class="orange"><?php printf( esc_html__( '%s', 'moulded-plastic' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 			</div>
 			
 		</section>

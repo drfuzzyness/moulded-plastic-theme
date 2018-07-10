@@ -44,7 +44,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mattconto-2016' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'moulded-plastic' ); ?></a>
 	
 	<!--Dynamically change between half-header, quarter-header, and full-header depending on page-->
 	<?php if( empty(get_field("hide_header") || get_field("hide_header") ) ) { ?>
@@ -53,7 +53,7 @@
 			<div class="large-2 medium-3 small-6 column logo medium-order-2 small-order-1">
 				<!--Logo-->
 				<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
-					<img src="<?php echo esc_url( get_theme_mod( 'mattconto_2016_logo_color' ) ); ?>" alt="">
+					<img src="<?php echo esc_url( get_theme_mod( 'moulded_plastic_logo_color' ) ); ?>" alt="">
 				</a>
 			</div>
 			<div class="large-10 medium-9 small-12 column medium-order-1 small-order-2">
@@ -83,7 +83,7 @@
 					<div class="top-bar-left">
 						<ul class="menu">
 							<li class="menu-text ">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src="<?php echo esc_url( get_theme_mod( 'mattconto_2016_logo_color' ) ); ?>" alt="">Matthew Conto</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src="<?php echo esc_url( get_theme_mod( 'moulded_plastic_logo_color' ) ); ?>" alt="">Matthew Conto</a>
 							</li>
 							<?php wp_nav_menu_no_ul_primary() ?>
 						</ul>

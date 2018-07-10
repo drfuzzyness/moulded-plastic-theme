@@ -40,10 +40,10 @@ get_header(); ?>
 
 		endif; ?>
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
-		<?php if ( function_exists( 'mattconto_2016_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
+		<?php if ( function_exists( 'moulded_plastic_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
 			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'mattconto_2016' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'mattconto_2016' ) ); ?></div>
+				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'moulded_plastic' ) ); ?></div>
+				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'moulded_plastic' ) ); ?></div>
 			</nav>
 		<?php } ?>
 

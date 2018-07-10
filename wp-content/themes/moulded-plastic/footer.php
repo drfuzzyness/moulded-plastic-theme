@@ -17,7 +17,7 @@
 		<div class="site-info row align-center">
 			<div class="large-4 small-4 column text-center">
 				<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
-					<img src="<?php echo esc_url( get_theme_mod( 'mattconto_2016_logo_white' ) ); ?>" alt="">
+					<img src="<?php echo esc_url( get_theme_mod( 'moulded_plastic_logo_white' ) ); ?>" alt="">
 				</a>
 			</div>
 		</div><!-- .site-info -->

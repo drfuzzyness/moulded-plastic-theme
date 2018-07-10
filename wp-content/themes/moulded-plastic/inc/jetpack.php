@@ -13,23 +13,23 @@
  * See: https://jetpack.me/support/infinite-scroll/
  * See: https://jetpack.me/support/responsive-videos/
  */
-function mattconto_2016_jetpack_setup() {
+function moulded_plastic_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'mattconto_2016_infinite_scroll_render',
+		'render'    => 'moulded_plastic_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 }
-add_action( 'after_setup_theme', 'mattconto_2016_jetpack_setup' );
+add_action( 'after_setup_theme', 'moulded_plastic_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function mattconto_2016_infinite_scroll_render() {
+function moulded_plastic_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

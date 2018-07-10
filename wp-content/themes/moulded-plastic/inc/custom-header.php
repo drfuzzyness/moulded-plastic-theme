@@ -18,27 +18,27 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses mattconto_2016_header_style()
+ * @uses moulded_plastic_header_style()
  */
-function mattconto_2016_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'mattconto_2016_custom_header_args', array(
+function moulded_plastic_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'moulded_plastic_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'mattconto_2016_header_style',
+		'wp-head-callback'       => 'moulded_plastic_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'mattconto_2016_custom_header_setup' );
+add_action( 'after_setup_theme', 'moulded_plastic_custom_header_setup' );
 
-if ( ! function_exists( 'mattconto_2016_header_style' ) ) :
+if ( ! function_exists( 'moulded_plastic_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see mattconto_2016_custom_header_setup().
+ * @see moulded_plastic_custom_header_setup().
  */
-function mattconto_2016_header_style() {
+function moulded_plastic_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

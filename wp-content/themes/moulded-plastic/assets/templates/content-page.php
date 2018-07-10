@@ -19,7 +19,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mattconto-2016' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'moulded-plastic' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -30,7 +30,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'mattconto-2016' ),
+					esc_html__( 'Edit %s', 'moulded-plastic' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
 				'<span class="edit-link">',
