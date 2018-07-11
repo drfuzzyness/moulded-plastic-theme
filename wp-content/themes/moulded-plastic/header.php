@@ -4,9 +4,9 @@
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  * Fields used: 
- theme_color
- theme_lightness
- hide_header
+ * theme_color
+ * theme_lightness
+ * hide_header
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
