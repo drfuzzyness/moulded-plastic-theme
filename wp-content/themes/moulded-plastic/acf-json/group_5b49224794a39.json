@@ -1,0 +1,44 @@
+{
+    "key": "group_5b49224794a39",
+    "title": "Post Controls",
+    "fields": [
+        {
+            "key": "field_56c0f8aafd4bb",
+            "label": "Styled title",
+            "name": "nice_title",
+            "type": "text",
+            "instructions": "<strong> for blue",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "html",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1531519575
+}
