@@ -1,41 +1,32 @@
-<?php
+<?php 
 /**
- * The template for displaying all single posts.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Matthew_Conto_2016
+ * The template for displaying all single posts and attachments
  */
 
 get_header(); ?>
+			
+<div class="content">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="inner-content grid-x grid-margin-x grid-padding-x">
 
-		<?php
-		while ( have_posts() ) : the_post();
+		<main class="main small-12 medium-8 large-8 cell" role="main">
+		
+		    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		
+		    	<?php get_template_part( 'parts/loop', 'single' ); ?>
+		    	
+		    <?php endwhile; else : ?>
+		
+		   		<?php get_template_part( 'parts/content', 'missing' ); ?>
 
-			get_template_part( 'template-parts/content', get_post_format() ); ?>
-			<!--<section class="page-block">
-				<div class="row align-center">
-					<div class="medium-8 small-10 column">-->
-						<?php the_post_navigation(); ?>
-					<!--</div>
-				</div>
-			</section>-->
-			<?php
+		    <?php endif; ?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		</main> <!-- end #main -->
 
-		endwhile; // End of the loop.
-		?>
+		<?php get_sidebar(); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div> <!-- end #inner-content -->
 
-<?php
-// get_sidebar();
-get_footer();
+</div> <!-- end #content -->
+
+<?php get_footer(); ?>

@@ -1,64 +1,38 @@
 <?php
 /**
- * The template for displaying 404 pages (not found).
+ * The template for displaying 404 (page not found) pages.
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package Matthew_Conto_2016
+ * For more info: https://codex.wordpress.org/Creating_an_Error_404_Page
  */
 
 get_header(); ?>
+			
+	<div class="content">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+	
+			<main class="main small-12 medium-8 large-8 cell" role="main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'moulded-plastic' ); ?></h1>
-				</header><!-- .page-header -->
+				<article class="content-not-found">
+				
+					<header class="article-header">
+						<h1><?php _e( 'Epic 404 - Article Not Found', 'jointswp' ); ?></h1>
+					</header> <!-- end article header -->
+			
+					<section class="entry-content">
+						<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'jointswp' ); ?></p>
+					</section> <!-- end article section -->
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'moulded-plastic' ); ?></p>
+					<section class="search">
+					    <p><?php get_search_form(); ?></p>
+					</section> <!-- end search section -->
+			
+				</article> <!-- end article -->
+	
+			</main> <!-- end #main -->
 
-					<?php
-						get_search_form();
+		</div> <!-- end #inner-content -->
 
-						the_widget( 'WP_Widget_Recent_Posts' );
+	</div> <!-- end #content -->
 
-						// Only show the widget if site has multiple categories.
-						if ( moulded_plastic_categorized_blog() ) :
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'moulded-plastic' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'moulded-plastic' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_footer();
+<?php get_footer(); ?>

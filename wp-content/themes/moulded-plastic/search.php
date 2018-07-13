@@ -1,48 +1,42 @@
-<?php
+<?php 
 /**
- * The template for displaying search results pages.
+ * The template for displaying search results pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package Matthew_Conto_2016
+ * For more info: https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  */
-
+ 	
 get_header(); ?>
-		<section class="row align-center page-block">
-			<div class="column large-8 small-10">
-				<span class="blue caps">Search Results:</span>
-				<h2 class="orange"><?php printf( esc_html__( '%s', 'moulded-plastic' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
-			</div>
 			
-		</section>
-		<?php
-		if ( have_posts() ) : ?>
+	<div class="content">
+
+		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+	
+			<main class="main small-12 medium-8 large-8 cell" role="main">
+				<header>
+					<h1 class="archive-title"><?php _e( 'Search Results for:', 'jointswp' ); ?> <?php echo esc_attr(get_search_query()); ?></h1>
+				</header>
+
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			 
+					<!-- To see additional archive styles, visit the /parts directory -->
+					<?php get_template_part( 'parts/loop', 'archive' ); ?>
+				    
+				<?php endwhile; ?>	
+
+					<?php joints_page_navi(); ?>
+					
+				<?php else : ?>
+				
+					<?php get_template_part( 'parts/content', 'missing' ); ?>
+						
+			    <?php endif; ?>
+	
+		    </main> <!-- end #main -->
 		
+		    <?php get_sidebar(); ?>
+		
+		</div> <!-- end #inner-content -->
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+	</div> <!-- end #content -->
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php
-// get_sidebar();
-get_footer();
+<?php get_footer(); ?>

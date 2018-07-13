@@ -1,55 +1,44 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * Displays archive pages if a speicifc template is not set. 
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package Matthew_Conto_2016
+ * For more info: https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
 get_header(); ?>
+			
+	<div class="content">
+	
+		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+		
+		    <main class="main small-12 medium-8 large-8 cell" role="main">
+			    
+		    	<header>
+		    		<h1 class="page-title"><?php the_archive_title();?></h1>
+					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
+		    	</header>
+		
+		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			 
+					<!-- To see additional archive styles, visit the /parts directory -->
+					<?php get_template_part( 'parts/loop', 'archive' ); ?>
+				    
+				<?php endwhile; ?>	
 
-		<?php
-		if ( have_posts() ) : ?>
+					<?php joints_page_navi(); ?>
+					
+				<?php else : ?>
+											
+					<?php get_template_part( 'parts/content', 'missing' ); ?>
+						
+				<?php endif; ?>
+		
+			</main> <!-- end #main -->
+	
+			<?php get_sidebar(); ?>
+	    
+	    </div> <!-- end #inner-content -->
+	    
+	</div> <!-- end #content -->
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-		<?php /* Display navigation to next/previous pages when applicable */ ?>
-		<?php if ( function_exists( 'moulded_plastic_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
-			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'moulded_plastic' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'moulded_plastic' ) ); ?></div>
-			</nav>
-		<?php } ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-// get_sidebar();
-get_footer();
+<?php get_footer(); ?>
