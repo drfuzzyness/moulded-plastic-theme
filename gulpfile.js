@@ -138,6 +138,7 @@ gulp.task('compile-scripts', function () {
         }))
 		.pipe(concat('script.js'))
 		.pipe(gulp.dest(distPath + '/js'))
+		.pipe(plugin.sourcemaps.write('.')) // Creates sourcemap for minified JS
 	);
 });
 
