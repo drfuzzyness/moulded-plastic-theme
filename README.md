@@ -18,3 +18,4 @@ Run `gulp` (after installing the [gulp-cli](https://github.com/gulpjs/gulp/blob/
 ## Resources
 - Setting up [Docker for Windows](https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly)
 - Setting up a [Docker workflow for Wordpress](https://github.com/visiblevc/wordpress-starter)
+- [Using VS Code for WordPress Development](https://deliciousbrains.com/vs-code-wordpress/)
